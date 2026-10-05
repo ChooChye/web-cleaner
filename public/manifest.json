@@ -2,7 +2,8 @@
   "manifest_version": 3,
   "name": "Web Cleaner",
   "version": "1.0.0",
-  "description": "Quickly clear browser data for the current website.",
+  "description": "A lightweight way to clear cookies, cache and storage for just the site you're on. Every other site stays signed in.",
+  "homepage_url": "https://github.com/ChooChye/web-cleaner",
   "permissions": [
     "browsingData",
     "tabs"

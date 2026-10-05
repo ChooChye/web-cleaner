@@ -1,14 +1,14 @@
 {
   "name": "web-cleaner",
   "version": "1.0.0",
-  "description": "",
+  "description": "A lightweight way to clear cookies, cache and storage for just the site you're on. Every other site stays signed in.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
   },
   "keywords": [],
-  "author": "",
+  "author": "ChooChye",
   "license": "ISC",
   "packageManager": "pnpm@12.9.1",
   "devDependencies": {
