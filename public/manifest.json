@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Web Cleaner",
+  "version": "1.0.0",
+  "description": "Quickly clear browser data for the current website.",
+  "permissions": ["browsingData", "tabs"],
+  "action": {
+    "default_title": "Web Cleaner",
+    "default_popup": "src/popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

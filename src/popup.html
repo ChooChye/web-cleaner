@@ -1,0 +1,41 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Web Cleaner</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1>🧹 Web Cleaner</h1>
+    <h6>Made with ❤️ by ChooChye</h6>
+
+    <div class="site-info">
+      <b>Site:</b>
+      <div id="site">
+      Detecting site...
+    </div>
+    </div>
+    
+
+    <div class="controls">
+<button id="clearAll" class="btn-primary">
+      Clear All Site Data
+    </button>
+
+    <button id="clearCache" class="btn-primary">
+      Clear Cache
+    </button>
+
+    <button id="clearCookies" class="btn-primary">
+      Clear Cookies
+    </button>
+    </div>
+
+    <p id="status"></p>
+  </main>
+
+  <script type="module" src="popup.ts"></script>
+</body>
