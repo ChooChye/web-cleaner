@@ -21,10 +21,14 @@ export class SiteCleaner {
     return ["http:", "https:"].includes(this.url.protocol);
   }
 
-  async clearAllData() {
+  private assertSupported() {
     if (!this.isSupported()) {
       throw new Error(`Unsupported protocol: ${this.url.protocol}`);
     }
+  }
+
+  async clearAllData() {
+    this.assertSupported();
 
     await chrome.browsingData.remove(
       {
@@ -42,27 +46,23 @@ export class SiteCleaner {
   }
 
   async clearCache() {
-    try {
-      await chrome.browsingData.remove(
-        { origins: [this.origin] },
-        {
-            cache: true,
-            cacheStorage: true,
-        }
-      )
-    } catch (error) {
-      console.error("Error clearing cache:", error);
-    }
+    this.assertSupported();
+
+    await chrome.browsingData.remove(
+      { origins: [this.origin] },
+      {
+        cache: true,
+        cacheStorage: true,
+      },
+    );
   }
 
   async clearCookies() {
-    try {
-        await chrome.browsingData.removeCookies({
-          origins: [this.origin],
-          since: 0,
-        });
-    } catch (error) {
-        console.error("Error clearing cookies:", error);
-    }
+    this.assertSupported();
+
+    await chrome.browsingData.removeCookies({
+      origins: [this.origin],
+      since: 0,
+    });
   }
 }
